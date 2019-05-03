@@ -43,10 +43,10 @@ a {
 a:hover {
     /* animation: shadow-pop-tl 0.3s linear both; */
     /* box-shadow: -4px -4px green; */
-    transform: translateX(4px) translateY(4px);
+    transform: translateX(6px) translateY(6px);
 }
 
-.fab {
+.fab, .far{
     color: rgb(222,222,222);
     font-size: 2.618rem;
     margin-right: .75rem;
@@ -71,7 +71,14 @@ a:hover {
 }
 
 .info p {
-    line-height: 1rem;
+    line-height: 1.3rem;
+}
+
+.picture {
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-top: 2rem;
+    width: 90%;
 }
 
 @media screen and (max-width: 930px) {
