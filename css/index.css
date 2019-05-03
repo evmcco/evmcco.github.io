@@ -3,6 +3,7 @@ html {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,9 +17,25 @@ h1 {
     max-width: 100%;
 }
 
+.firstname {
+    animation: slide-in-blurred-top 1s .25s both;
+}
+
+.lastname {
+    animation: slide-in-blurred-top 1s .5s both;
+}
+
 h2 {
     font-size: 2.618rem;
     line-height: .5rem;
+}
+
+.firstsub {
+    animation: slide-in-blurred-top 1s .75s both;
+}
+
+.secondsub {
+    animation: slide-in-blurred-top 1s 1s both;
 }
 
 h3 {
@@ -34,26 +51,23 @@ header {
     top: 20%;
 }
 
-a {
-    text-decoration: none;
-    transition: box-shadow .75s, transform .75s;
-    /* -webkit-transition: box-shadow 2s, transform 2s; */
-}
-
-a:hover {
+.fab:hover, .far:hover {
     /* animation: shadow-pop-tl 0.3s linear both; */
     /* box-shadow: -4px -4px green; */
     transform: translateX(6px) translateY(6px);
 }
 
-.fab, .far{
+.fab, .far {
+    animation: slide-in-blurred-top 1s 1.25s both;
     color: rgb(222,222,222);
     font-size: 2.618rem;
     margin-right: .75rem;
+    text-decoration: none;
+    transition: box-shadow .75s, transform .75s;
 }
 
 .scroll--notif {
-	animation: bounce-top 1.5s ease-out both;
+	animation: bounce-top 1.5s 2s ease-out both;
     color: rgb(222,222,222);
     font-size: 1.618rem;
     position: absolute;
@@ -61,10 +75,16 @@ a:hover {
     right: 25%;
 }
 
+.fa-chevron-down {
+    color: rgb(222,222,222);
+    text-decoration: none;
+}
+
 .info {
     font-size: 1rem;
     left: 55%;
     padding-bottom: 50vh;
+    padding-top: 1rem;
     position: absolute;
     right: 5%;
     top: 100vh;
@@ -81,6 +101,11 @@ a:hover {
     width: 90%;
 }
 
+a[ id= "scroll" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
 @media screen and (max-width: 930px) {
     h1 {
         /* font-size: 11.79vw; */
@@ -92,7 +117,7 @@ a:hover {
         font-size: 1.618rem;
     }
 
-    .fab {
+    .fab, .far {
         /* font-size: 4.5vw; */
         font-size: 1.618rem;
     }
@@ -112,7 +137,7 @@ a:hover {
 @keyframes bounce-top {
     0% {
         /* transform: translateY(-45px); */
-        transform: translateY(-90px);
+        transform: translateY(-10000px);
         animation-timing-function: ease-in;
         opacity: 1;
     }
@@ -153,13 +178,43 @@ a:hover {
     }
 }
 
-@keyframes shadow-pop-tl {
+@-webkit-keyframes slide-in-blurred-top {
     0% {
-        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-        transform: translateX(0) translateY(0);
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+                filter: blur(40px);
+        opacity: 0;
     }
     100% {
-        box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e;
-        transform: translateX(8px) translateY(8px);
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        opacity: 1;
+    }
+}
+    @keyframes slide-in-blurred-top {
+    0% {
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+                transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+                filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+                transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+                filter: blur(0);
+        opacity: 1;
     }
 }
