@@ -1,0 +1,133 @@
+html {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(33,33,33);
+    color: rgb(222,222,222);
+}
+
+h1 {
+    font-size: 6.854rem;
+    line-height: 1rem;
+}
+
+h2 {
+    font-size: 2.618rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 1.618rem;
+}
+
+header {
+    left: 10%;
+    position: fixed;
+    top: 20%;
+}
+
+a {
+    text-decoration: none;
+    /* transition: 1s */
+}
+
+a:hover {
+    /* animation: shadow-pop-tl 0.3s linear both; */
+    box-shadow: -4px -4px, rgb(222,222,222);
+    transform: translateX(4px) translateY(4px);
+}
+
+.fab {
+    color: rgb(222,222,222);
+    font-size: 2.618rem;
+    margin-right: .75rem;
+}
+
+.scroll--notif {
+	animation: bounce-top 1.5s ease-out both;
+    color: rgb(222,222,222);
+    font-size: 1.618rem;
+    position: absolute;
+    top: 95vh;
+    right: 25%;
+}
+
+.info {
+    font-size: 1rem;
+    left: 55%;
+    padding-bottom: 50vh;
+    position: absolute;
+    right: 5%;
+    top: 100vh;
+}
+
+.info p {
+    line-height: 1rem;
+}
+
+@media screen and (max-width: 930px) {
+    .info {
+        background-color: rgb(33,33,33);
+        left: 10%;
+        /* width: 26rem; */
+        /* right: 30%; */
+    }
+
+    .scroll--notif {
+        left: 50%;
+    }
+}
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+@keyframes shadow-pop-tl {
+    0% {
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        box-shadow: -1px -1px #3e3e3e, -2px -2px #3e3e3e, -3px -3px #3e3e3e, -4px -4px #3e3e3e, -5px -5px #3e3e3e, -6px -6px #3e3e3e, -7px -7px #3e3e3e, -8px -8px #3e3e3e;
+        transform: translateX(8px) translateY(8px);
+    }
+}
