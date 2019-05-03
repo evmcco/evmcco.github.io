@@ -18,11 +18,12 @@ h1 {
 
 h2 {
     font-size: 2.618rem;
-    line-height: 2rem;
+    line-height: .5rem;
 }
 
 h3 {
     font-size: 1.618rem;
+    margin-top: 0;
 }
 
 header {
@@ -35,12 +36,13 @@ header {
 
 a {
     text-decoration: none;
-    /* transition: 1s */
+    transition: box-shadow .75s, transform .75s;
+    /* -webkit-transition: box-shadow 2s, transform 2s; */
 }
 
 a:hover {
     /* animation: shadow-pop-tl 0.3s linear both; */
-    box-shadow: -4px -4px, rgb(222,222,222);
+    /* box-shadow: -4px -4px green; */
     transform: translateX(4px) translateY(4px);
 }
 
@@ -102,7 +104,8 @@ a:hover {
 
 @keyframes bounce-top {
     0% {
-        transform: translateY(-45px);
+        /* transform: translateY(-45px); */
+        transform: translateY(-90px);
         animation-timing-function: ease-in;
         opacity: 1;
     }
@@ -110,19 +113,23 @@ a:hover {
         opacity: 1;
     }
     40% {
-        transform: translateY(-24px);
+        /* transform: translateY(-24px); */
+        transform: translateY(-48px);
         animation-timing-function: ease-in;
     }
     65% {
-        transform: translateY(-12px);
+        /* transform: translateY(-12px); */
+        transform: translateY(-24px);
         animation-timing-function: ease-in;
     }
     82% {
-        transform: translateY(-6px);
+        /* transform: translateY(-6px); */
+        transform: translateY(-12px);
         animation-timing-function: ease-in;
     }
     93% {
-        transform: translateY(-4px);
+        /* transform: translateY(-4px); */
+        transform: translateY(-8px);
         animation-timing-function: ease-in;
     }
     25%,
