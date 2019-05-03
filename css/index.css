@@ -18,11 +18,11 @@ h1 {
 }
 
 .firstname {
-    animation: slide-in-blurred-top 1s .25s both;
+    animation: slide-in-blurred-top 1s .2s both;
 }
 
 .lastname {
-    animation: slide-in-blurred-top 1s .5s both;
+    animation: slide-in-blurred-top 1s .4s both;
 }
 
 h2 {
@@ -31,11 +31,11 @@ h2 {
 }
 
 .firstsub {
-    animation: slide-in-blurred-top 1s .75s both;
+    animation: slide-in-blurred-top 1s .6s both;
 }
 
 .secondsub {
-    animation: slide-in-blurred-top 1s 1s both;
+    animation: slide-in-blurred-top 1s .8s both;
 }
 
 h3 {
@@ -58,7 +58,7 @@ header {
 }
 
 .fab, .far {
-    animation: slide-in-blurred-top 1s 1.25s both;
+    animation: slide-in-blurred-top 1s 1s both;
     color: rgb(222,222,222);
     font-size: 2.618rem;
     margin-right: .75rem;
@@ -67,11 +67,11 @@ header {
 }
 
 .scroll--notif {
-	animation: bounce-top 1.5s 2s ease-out both;
+	animation: bounce-top 1.5s 1.5s ease-out both;
     color: rgb(222,222,222);
     font-size: 1.618rem;
     position: absolute;
-    top: 90vh;
+    top: 95vh;
     right: 25%;
 }
 
@@ -131,6 +131,7 @@ a[ id= "scroll" ]:target ~ #main article.panel {
 
     .scroll--notif {
         left: 50%;
+        top: 80vh;
     }
 }
 
