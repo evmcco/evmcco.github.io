@@ -138,9 +138,9 @@ a[ id= "scroll" ]:target ~ #main article.panel {
 @keyframes bounce-top {
     0% {
         /* transform: translateY(-45px); */
-        transform: translateY(-10000px);
+        transform: translateY(-90px);
         animation-timing-function: ease-in;
-        opacity: 1;
+        opacity: 0;
     }
     24% {
         opacity: 1;
