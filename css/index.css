@@ -1,4 +1,5 @@
 html {
+    box-sizing: border-box;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
     margin: 0;
@@ -30,12 +31,23 @@ h2 {
     line-height: .5rem;
 }
 
+.subtitle {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
 .firstsub {
     animation: slide-in-blurred-top 1s .6s both;
+    margin-top: 5px;
 }
 
 .secondsub {
     animation: slide-in-blurred-top 1s .8s both;
+    margin-bottom: 5px;
+}
+
+.social--links {
+    margin-top: 2rem;
 }
 
 h3 {
@@ -45,9 +57,7 @@ h3 {
 
 header {
     left: 10%;
-    /* max-width: 400px; */
     position: fixed;
-    /* right: 40%;  */
     top: 20%;
 }
 
