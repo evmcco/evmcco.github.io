@@ -80,7 +80,7 @@ header {
 	animation: bounce-top 1.5s 1.5s ease-out both;
     color: rgb(222,222,222);
     font-size: 1.618rem;
-    position: absolute;
+    position: fixed;;
     top: 95vh;
     right: 25%;
     z-index: -1;
@@ -92,6 +92,8 @@ header {
 }
 
 .info {
+    background-color: rgb(33,33,33);
+    box-shadow: 0px -10px 10px rgb(33,33,33);
     font-size: 1rem;
     left: 55%;
     padding-bottom: 50vh;
@@ -135,7 +137,6 @@ a[ id= "scroll" ]:target ~ #main article.panel {
     }
 
     .info {
-        background-color: rgb(33,33,33);
         left: 10%;
         /* width: 26rem; */
         /* right: 30%; */
