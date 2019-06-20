@@ -61,13 +61,7 @@ header {
     top: 20%;
 }
 
-.fab:hover, .far:hover {
-    /* animation: shadow-pop-tl 0.3s linear both; */
-    /* box-shadow: -4px -4px green; */
-    transform: translateX(6px) translateY(6px);
-}
-
-.fab, .far {
+.header-image {
     animation: slide-in-blurred-top 1s 1s both;
     color: rgb(222,222,222);
     font-size: 2.618rem;
@@ -108,12 +102,20 @@ header {
     line-height: 1.3rem;
 }
 
-.picture {
+.image {
     border-radius: 8px;
     margin-bottom: 1rem;
-    /* margin-left: 5%; */
     margin-top: 1rem;
-    width: 90%;
+    width: 100%;
+}
+
+.project-header {
+    margin-bottom: .2rem;
+}
+
+.project-info-link {
+    color: rgb(222,222,222);
+    text-decoration: none;
 }
 
 a[ id= "scroll" ]:target ~ #main article.panel {
@@ -132,13 +134,17 @@ a[ id= "scroll" ]:target ~ #main article.panel {
         font-size: 1.618rem;
     }
 
-    .fab, .far {
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .header-image {
         /* font-size: 4.5vw; */
         font-size: 1.618rem;
     }
 
     .info {
-        left: 10%;
+        left: 5%;
         /* width: 26rem; */
         /* right: 30%; */
     }
