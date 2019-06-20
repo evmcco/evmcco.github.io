@@ -118,6 +118,18 @@ header {
     text-decoration: none;
 }
 
+.skills-list {
+    align-content: flex-start;
+    align-items: flex-start;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-item {
+    margin: 1rem;
+}
+
 a[ id= "scroll" ]:target ~ #main article.panel {
     -webkit-transform: translateY( 0px);
     transform: translateY( 0px );
