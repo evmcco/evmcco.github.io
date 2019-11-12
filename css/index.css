@@ -166,6 +166,19 @@ a[id="scroll"]:target ~ #main article.panel {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .firstname,
+  .lastname {
+    font-size: 25vw;
+  }
+
+  .firstsub,
+  .secondsub,
+  .header-image {
+    font-size: 10vw;
+  }
+}
+
 @keyframes bounce-top {
   0% {
     /* transform: translateY(-45px); */
