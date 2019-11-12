@@ -162,7 +162,7 @@ a[id="scroll"]:target ~ #main article.panel {
 
   .scroll--notif {
     left: 50%;
-    top: 80vh;
+    top: 90vh;
   }
 }
 
@@ -175,7 +175,7 @@ a[id="scroll"]:target ~ #main article.panel {
   .firstsub,
   .secondsub,
   .header-image {
-    font-size: 10vw;
+    font-size: 9vw;
   }
 }
 
